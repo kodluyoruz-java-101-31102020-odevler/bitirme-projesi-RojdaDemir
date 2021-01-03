@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Kitap Ekle</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/shards.min.css">
+    </head>
+    <body>
+ <div class="container my-5">
+            <h4 class="mb-5">Yeni Kitap Ekleyiniz</h4>
+            <div class="row">
+                <div class="col-md-12">
+                    <form action="#" th:action="@{/pages/book}" th:object="${bookContext}" method="POST">
+                        <div class="row">
+                        
+                            <div class="form-group col-md-6">
+                                <label for="bookName" class="col-form-label">Kitabın Adı:</label>
+                                <input type="text" th:field="*{bookName}" class="form-control" id="bookName" placeholder="kitap">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="bookAuthor" class="col-form-label">Kitabın Yazarı:</label>
+                                <input type="text" th:field="*{bookAuthor}" class="form-control" id="bookAuthor" placeholder="yazar">
+                            </div>
+                        </div>
+                        <div class="row">
+                        
+                            <div class="form-group col-md-6">
+                                <label for="pageCount" class="col-form-label">Kitabın Sayfa Sayısı:</label>
+                                <input type="number" th:field="*{pageCount}" class="form-control" id="pageCount" placeholder="sayfa sayısı">
+                            </div>
+                              <div class="form-group col-md-6">
+                                <label for="publisher" class="col-form-label">Yayınevi:</label>
+                                <input type="text" th:field="*{publisher}" class="form-control" id="publisher" placeholder="yayınevi">
+                            </div>
+                        </div>
+                        <div class="row">                                
+                        
+                         <div class="form-group col-md-6">
+                                <label for=publishYear class="col-form-label">Yayınlanma Yılı:</label>
+								<input type="number" th:value="*{publishYear}"class="form-control" id="publishYear" placeholder="yayın yılı">
+                            </div>
+                         <div class="form-group col-md-6">
+                                <label for=bookDescription class="col-form-label">Kitabın Açıklaması:</label>
+								<input type="text" th:value="*{bookDescription}"class="form-control" id="bookDescription" placeholder="açıklama">
+                            </div>
+    
+                       <div class="form-group col-md-6">
+                                <label for=readerNote class="col-form-label">Okur Notu:</label>
+								<input type="text" th:value="*{readerNote}"class="form-control" id="readerNote" placeholder="okur notu">
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mt-5">
+                                <input type="submit" class="btn btn-primary btn-success" value="Kaydet">
+                            </div>
+                           </div>                                       
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

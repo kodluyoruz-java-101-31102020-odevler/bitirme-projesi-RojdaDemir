@@ -10,8 +10,6 @@ public class Application {
 
 	public static void main(String[] args) {
 		
-		//Projeyi çalıştıramadım hocam.BookRepository hatası alıyorum.Bir de book entitysini görmüyor.
-		//Ders projesiyle aynı ama sorunu çözemedim.
 		SpringApplication.run(Application.class, args);
 	}
 }
